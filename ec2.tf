@@ -12,7 +12,7 @@
 
 
 
-resource "aws_instance" "web-1" {
+resource "aws_instance" "web" {
     ami = var.imagename
     #ami = "ami-0d857ff0f5fc4e03b"
     #ami = "${data.aws_ami.my_ami.id}"
@@ -29,13 +29,13 @@ resource "aws_instance" "web-1" {
 	CostCenter = "ABCD"
 
  }
-}
+
 
 root_block_device {
     volume_type = "gp2"
     volume_size = "35"
 }
-
+}
 
 
 
